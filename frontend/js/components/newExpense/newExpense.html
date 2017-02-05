@@ -1,8 +1,21 @@
 <md-content layout-padding>
-  <form name="expenseForm">
-    <md-input-container class="md-block">
-      <label>Expense</label>
-      <input required name="expense" ng-model="expense.name">
-    </md-input-container>
-  </form>
+  <md-card>
+    <md-card-header>
+      <span class="md-title">Add/Edit expense form</span>
+    </md-card-header>
+    <md-card-content>
+      <form name="expenseForm">
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block">
+            <label>Expense name</label>
+            <input required md-no-asterisk name="expense" ng-model="expense.name">
+          </md-input-container>
+          <md-input-container>
+            <label>Amount</label>
+            <input require type="number" step="any" name="amount" ng-model="expense.amount" min="1"/>
+          </md-input-container>
+        </div>
+      </form>
+    </md-card-content>
+  </md-card>
 </md-content>
