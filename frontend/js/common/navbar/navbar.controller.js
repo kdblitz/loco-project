@@ -1,6 +1,10 @@
 class NavbarController {
-  constructor() {
-
+  // @ngInject
+  constructor($state) {
+    let state = $state;
+    setTimeout( () => {
+      this.currentNavItem = state.current.name;
+    }, 0);
   }
 }
 

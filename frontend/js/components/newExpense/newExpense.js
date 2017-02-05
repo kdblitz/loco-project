@@ -7,7 +7,7 @@ let newExpenseModule = angular.module('newExpense', [
 ]).config(($stateProvider) => {
   'ngInject';
   $stateProvider.state('newExpense', {
-    url: 'newExpense',
+    url: '/newExpense',
     component: 'newExpense'
     // template: '<new-expense></new-expense>'
   });
